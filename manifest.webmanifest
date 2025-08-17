@@ -1,0 +1,15 @@
+{
+  "name": "B1 Polish Exam Bot",
+  "short_name": "B1 Bot",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ef4444",
+  "icons": [
+    {
+      "src": "/assets/img/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

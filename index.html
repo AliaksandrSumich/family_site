@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Подготовка к экзамену B1 по польскому в Telegram</title>
+  <meta name="description" content="Интерактивный Telegram-бот для подготовки к экзамену B1 по польскому: аудирование, грамматика, говорение, письмо и отслеживание прогресса.">
+  <link rel="icon" href="./assets/img/logo.jpg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta property="og:title" content="Telegram-бот: подготовка к B1 по польскому">
+  <meta property="og:description" content="Готовься к B1 эффективно в Telegram: задания как на экзамене и мгновенная обратная связь.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.pexels.com/photos/5088011/pexels-photo-5088011.jpeg">
+  <meta name="theme-color" content="#ef4444">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Roboto','Arial','Noto Sans','sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="antialiased text-slate-800 scroll-smooth">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 blur-backdrop border-b">
+    <div class="mx-auto container px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="./assets/img/logo.jpg" alt="B1 Bot Logo" class="w-9 h-9">
+        <span class="font-bold">Polish Bot</span>
+      </a>
+      <nav id="nav" class="hidden md:flex items-center gap-6">
+        <a href="#features" class="hover:text-red-500">Возможности</a>
+        <a href="#how" class="hover:text-red-500">Как это работает</a>
+        <a href="#reviews" class="hover:text-red-500">Отзывы</a>
+        <a href="#faq" class="hover:text-red-500">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a data-cta="bot" href="https://t.me/polski_B1_bot" onclick="track('cta_header_bot')" class="hidden md:inline-block px-4 py-2 rounded-2xl gradient-brand text-black shadow-soft">🚀 Перейти к проекту</a>
+        <button id="menu-btn" class="md:hidden inline-flex items-center px-3 py-2 rounded-xl border">Меню</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto container px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-black leading-tight">🎓 Подготовься к экзамену B1 по польскому <span class="text-red-500">эффективно и интерактивно</span> прямо в Telegram</h1>
+        <p class="mt-4 text-lg text-slate-600">Тренируй все навыки экзамена: аудирование, грамматику, описание изображения, диалог/говорение и письмо. Получай мгновенную обратную связь и отслеживай прогресс.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a data-cta="bot" href="https://t.me/polski_B1_bot" onclick="track('cta_hero_bot')" class="px-6 py-3 rounded-2xl border text-center">🚀 Перейти к проекту</a>
+          <a href="https://buy.stripe.com/eVq28q34Jbkmb5f3cQ0Fi2Z" onclick="track('cta_hero_donate')" class="px-6 py-3 rounded-2xl border text-center">☕ Поддержать проект</a>
+        </div>
+        <div class="mt-3 text-xs text-slate-500">Бот бесплатный. Донат — по желанию.</div>
+      </div>
+      <div class="relative">
+        <img class="rounded-2xl shadow-soft w-full" alt="Учёба в Telegram" src="https://images.pexels.com/photos/5088011/pexels-photo-5088011.jpeg">
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-soft w-60">
+          <div class="font-semibold">Ваш прогресс</div>
+          <div class="mt-2 h-2 bg-slate-200 rounded-full overflow-hidden">
+            <div class="h-full bg-red-500" style="width:72%"></div>
+          </div>
+          <div class="mt-2 text-xs text-slate-500">72% к цели B1</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-16 bg-slate-50">
+    <div class="mx-auto container px-4 container-narrow">
+      <h2 class="text-2xl md:text-4xl font-extrabold text-center">Все навыки экзамена в одном месте</h2>
+      <p class="text-center text-slate-600 mt-2">Интерактивная практика и мгновенная обратная связь.</p>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-3xl">🎧</div>
+          <h3 class="font-bold mt-2">Rozumienie ze słuchu</h3>
+          <p class="text-slate-600 mt-2">Тренируй понимание устной речи на реальных сценариях. Бот воспроизводит аудио и задаёт вопросы.</p>
+          <img class="mt-4 rounded-xl" alt="Аудирование" src="https://images.pexels.com/photos/3767363/pexels-photo-3767363.jpeg">
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-3xl">📝</div>
+          <h3 class="font-bold mt-2">Poprawność gramatyczna</h3>
+          <p class="text-slate-600 mt-2">Вставь свой текст — получи автоматическую проверку и подсказки по улучшению.</p>
+          <img class="mt-4 rounded-xl" alt="Грамматика" src="https://images.pexels.com/photos/5905715/pexels-photo-5905715.jpeg">
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-3xl">🖼</div>
+          <h3 class="font-bold mt-2">Opis obrazu</h3>
+          <p class="text-slate-600 mt-2">Практикуй устную речь, описывая фотографию — как на реальном экзамене.</p>
+          <img class="mt-4 rounded-xl" alt="Описание изображения" src="https://images.pexels.com/photos/4144294/pexels-photo-4144294.jpeg">
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-3xl">🗣</div>
+          <h3 class="font-bold mt-2">Dialog & Mówienie</h3>
+          <p class="text-slate-600 mt-2">Распознавание речи и анализ ответа: прослушаем, оценим, дадим рекомендации.</p>
+          <img class="mt-4 rounded-xl" alt="Диалог и говорение" src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg">
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-3xl">✍️</div>
+          <h3 class="font-bold mt-2">Pisanie</h3>
+          <p class="text-slate-600 mt-2">Загрузи письменное задание — бот оценит структуру, лексику и грамматику.</p>
+          <img class="mt-4 rounded-xl" alt="Письмо" src="https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg">
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-3xl">📊</div>
+          <h3 class="font-bold mt-2">Прогресс</h3>
+          <p class="text-slate-600 mt-2">Понятные метрики, уровни и рекомендации по следующему шагу.</p>
+          <img class="mt-4 rounded-xl" alt="Прогресс" src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="py-16">
+    <div class="mx-auto container px-4 container-narrow">
+      <h2 class="text-2xl md:text-4xl font-extrabold text-center">Как это работает</h2>
+      <div class="mt-10 grid md:grid-cols-4 gap-6">
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-2xl">📲</div>
+          <div class="font-semibold mt-2">Запусти бота</div>
+          <p class="text-slate-600 mt-2">Перейди по ссылке в Telegram и нажми Start.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-2xl">🎯</div>
+          <div class="font-semibold mt-2">Выбери модуль</div>
+          <p class="text-slate-600 mt-2">Аудирование, говорение, письмо, грамматика и др.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-2xl">📝</div>
+          <div class="font-semibold mt-2">Выполни задание</div>
+          <p class="text-slate-600 mt-2">Следуй инструкциям, отвечай голосом или текстом.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <div class="text-2xl">📈</div>
+          <div class="font-semibold mt-2">Получай фидбек</div>
+          <p class="text-slate-600 mt-2">Сразу видишь оценку, ошибки и рекомендации.</p>
+        </div>
+      </div>
+      <style>
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 200, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px 8px rgba(255, 200, 0, 0.3);
+  }
+}
+.btn-pulse {
+  animation: pulse 2s infinite;
+}
+</style>
+
+<div class="text-center mt-8">
+  <a data-cta="bot" 
+     href="https://t.me/polski_B1_bot" 
+     onclick="track('cta_how_bot')" 
+     class="px-8 py-4 rounded-2xl gradient-brand text-black shadow-lg inline-block font-bold text-lg transition duration-300 hover:scale-110 hover:shadow-2xl btn-pulse">
+     🚀 Начать сейчас
+  </a>
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="py-16 bg-slate-50">
+    <div class="mx-auto container px-4 container-narrow">
+      <h2 class="text-2xl md:text-4xl font-extrabold text-center">Отзывы</h2>
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <p class="italic">“С ботом я наконец понял, как правильно тренироваться к экзамену. Очень удобно и быстро!”</p>
+          <div class="mt-4 text-sm text-slate-500">Алексей — готовится к B1</div>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow-soft">
+          <p class="italic">“Лучшее решение для самостоятельной подготовки! Особенно понравились задания на аудирование.”</p>
+          <div class="mt-4 text-sm text-slate-500">Мария — студентка</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16">
+    <div class="mx-auto container px-4 container-narrow">
+      <h2 class="text-2xl md:text-4xl font-extrabold text-center">Частые вопросы</h2>
+      <div class="mt-10 space-y-4">
+        <details class="p-4 bg-white rounded-2xl shadow-soft">
+          <summary class="font-semibold cursor-pointer">Сколько стоит бот?</summary>
+          <p class="mt-2 text-slate-600">Бот бесплатный. Донат по желанию.</p>
+        </details>
+        <details class="p-4 bg-white rounded-2xl shadow-soft">
+          <summary class="font-semibold cursor-pointer">Нужны ли дополнительные материалы?</summary>
+          <p class="mt-2 text-slate-600">Нет, все встроено в бота.</p>
+        </details>
+        <details class="p-4 bg-white rounded-2xl shadow-soft">
+          <summary class="font-semibold cursor-pointer">Можно ли заниматься без преподавателя?</summary>
+          <p class="mt-2 text-slate-600">Да, бот подходит для самостоятельной подготовки и занятий с преподавателем.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="mx-auto container px-4 text-center">
+      <h2 class="text-2xl md:text-4xl font-extrabold">Готов к экзамену B1? Начни тренироваться сегодня!</h2>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+        <a data-cta="bot" href="https://t.me/polski_B1_bot" onclick="track('cta_bottom_bot')" class="px-6 py-3 rounded-2xl border text-center">🚀 Перейти к проекту</a>
+        <a href="https://buy.stripe.com/eVq28q34Jbkmb5f3cQ0Fi2Z" onclick="track('cta_bottom_donate')" class="px-6 py-3 rounded-2xl border">☕ Донат</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t">
+    <div class="mx-auto container px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="./assets/img/logo.jpg" alt="" class="w-6 h-6">
+        <span>© 2025 B1 Polish Bot. Все права защищены.</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#features" class="hover:text-red-500">Возможности</a>
+        <a href="#faq" class="hover:text-red-500">FAQ</a>
+        <a href="mailto:polish.b1.telegram@gmail.com" class="hover:text-red-500">Связаться</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Telegram-бот подготовки к экзамену B1 (польский)",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Android, iOS, Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://t.me/polski_B1_bot",
+    "description": "Интерактивная подготовка к B1 по польскому в Telegram.",
+    "image": "https://images.pexels.com/photos/5088011/pexels-photo-5088011.jpeg"
+  }
+  </script>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
