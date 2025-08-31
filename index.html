@@ -26,7 +26,7 @@
 </head>
 <body class="antialiased text-slate-800 scroll-smooth">
   <header class="sticky top-0 z-40 bg-white/80 blur-backdrop border-b">
-    <div class="mx-auto container px-4 py-3 flex items-center justify-between">
+    <div class="mx-auto container px-4 py-3 flex items-center justify-between relative">
       <a href="#" class="flex items-center gap-3" aria-label="Главная">
         <img src="./assets/img/logo.jpg" alt="B1 Bot Logo" class="w-9 h-9">
         <span class="font-bold">Polish Bot</span>
@@ -41,7 +41,7 @@
       </nav>
       <div class="flex items-center gap-2">
         <a data-cta="bot" href="https://t.me/polski_B1_bot" onclick="track('cta_header_bot')" class="hidden md:inline-block px-4 py-2 rounded-2xl gradient-brand text-black shadow-soft">🚀 Открыть Telegram‑бота</a>
-        <button id="menu-btn" class="md:hidden inline-flex items-center px-3 py-2 rounded-xl border" aria-label="Открыть меню">Меню</button>
+        <button id="menu-btn" class="md:hidden inline-flex items-center px-3 py-2 rounded-xl border" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">Меню</button>
       </div>
     </div>
   </header>
@@ -162,7 +162,7 @@
       <p class="text-center text-slate-600 mt-2">Полные варианты и больше материалов доступны в <a data-cta="bot" href="https://t.me/polski_B1_bot" class="text-red-500 underline" onclick="track('cta_tests_more_bot')">Telegram‑боте</a>.</p>
 
       <div class="mt-10 space-y-6">
-        <details class="p-4 bg-white rounded-2xl shadow-soft" open>
+        <details id="details-listening" class="p-4 bg-white rounded-2xl shadow-soft" open>
           <summary class="font-semibold cursor-pointer text-lg">🎧 Rozumienie ze słuchu (Аудирование)</summary>
           <div id="listening-root" class="mt-4"></div>
         </details>
